@@ -7,22 +7,20 @@ extern "C" {
 
 #include "lvgl.h"
 
-/**
- * Generic placeholder UI — stands in for a SquareLine Studio export so the
- * project builds and runs before you have a real one. Re-exporting from
- * SquareLine into this folder (see README) overwrites this file; nothing
- * outside `ui/` depends on it being exactly this content, only on the
- * symbols below existing.
- *
- * It doubles as a smoke test for the display + touch BSP:
- *   - drag the arc  -> exercises touch tracking (and reveals a wrong
- *                      swap_xy/mirror_x/mirror_y touch calibration)
- *   - tap the button -> exercises touch taps + LVGL click events, and
- *                       flips the screen background color so it's obvious
- *                       even without reading the label
- */
 void ui_init(void);
 
+/* Pantalla Splash */
+extern lv_obj_t *ui_scrSplash;
+extern lv_obj_t *ui_lblSplashTitle;
+extern lv_obj_t *ui_lblSplashStatus;
+
+/* Widgets de la pantalla principal */
+extern lv_obj_t *ui_arcBattery;
+extern lv_obj_t *ui_lblBatteryValue;
+extern lv_obj_t *ui_lblTemperature;
+extern lv_obj_t *ui_lblUptime;
+
+/* Elementos originales */
 extern lv_obj_t *ui_scrMain;
 extern lv_obj_t *ui_lblTitle;
 extern lv_obj_t *ui_lblSubtitle;
